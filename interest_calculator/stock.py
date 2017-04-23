@@ -47,6 +47,6 @@ class Stock:
         self.value[self.current_month + 1] = self.value[self.current_month] * self.expected_monthly_growth
 
     def __str__(self):
-        print "Stock ($%f Bought, $%f Sold, %d Current Shares, %d Current Value)" % (
+        return "Stock ($%f Bought, $%f Sold, %d Current Shares, %d Current Value)" % (
         self.get_total_money_spent(), self.get_total_money_made(), self.get_current_shares(),
         self.get_current_shares() * self.value[self.current_month])
