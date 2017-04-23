@@ -43,8 +43,8 @@ class Stock:
         self.selling_history[self.current_month] += amount_must_get_out
 
     def go_to_next_month(self):
-        self.current_month += 1
         self.value[self.current_month + 1] = self.value[self.current_month] * self.expected_monthly_growth
+        self.current_month += 1
 
     def __str__(self):
         return "Stock ($%f Bought, $%f Sold, %d Current Shares, %d Current Value)" % (
