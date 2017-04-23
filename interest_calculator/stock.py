@@ -11,7 +11,7 @@ class Stock:
 
         self.purchase_history = defaultdict(int)
         self.selling_history = defaultdict(int)
-        
+
     def get_total_money_spent(self):
         total_amount_bought = 0
         for month, amount in self.purchase_history:
@@ -32,7 +32,7 @@ class Stock:
         for month, amount in self.selling_history:
             shares -= amount
 
-        return amount
+        return shares
 
     def put_money_in(self, money_to_put_in):
         amount_can_buy = money_to_put_in / self.value[self.current_month]
