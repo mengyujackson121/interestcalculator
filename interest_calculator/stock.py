@@ -14,22 +14,22 @@ class Stock:
 
     def get_total_money_spent(self):
         total_amount_bought = 0
-        for month, amount in self.purchase_history:
+        for month, amount in self.purchase_history.items():
             total_amount_bought += amount * self.value[month]
         return total_amount_bought
 
     def get_total_money_made(self):
         total_amount_sold = 0
-        for month, amount in self.selling_history:
+        for month, amount in self.selling_history.items():
             total_amount_sold += amount * self.value[month]
         return total_amount_sold
 
     def get_current_shares(self):
         shares = 0
-        for month, amount in self.purchase_history:
+        for month, amount in self.purchase_history.items():
             shares += amount
 
-        for month, amount in self.selling_history:
+        for month, amount in self.selling_history.items():
             shares -= amount
 
         return shares
